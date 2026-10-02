@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "HN Blocker",
+  "version": "0.1.0",
+  "description": "Crude blocking of Hacker News users: hides their comments and stories, with a block button on profile pages.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://news.ycombinator.com/*",
+        "https://news.yc.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "HN Blocker",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

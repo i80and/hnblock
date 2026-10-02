@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HN Blocker — Blocklist</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 480px;
+        margin: 16px auto;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        padding: 4px 8px;
+      }
+      #empty {
+        color: #555;
+      }
+      form {
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HN Blocker — Blocklist</h1>
+    <p>Blocked users' comments and stories are hidden on classic HN pages.</p>
+    <form id="add-form">
+      <input type="text" id="add-input" placeholder="username" aria-label="username to block" />
+      <button id="add-btn" type="submit">Block</button>
+    </form>
+    <table id="list"></table>
+    <p id="empty" hidden>No users blocked.</p>
+    <script src="options.js"></script>
+  </body>
+</html>
